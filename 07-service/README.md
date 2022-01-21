@@ -4,6 +4,8 @@
 - kubectl describe service springboot-load-balancer
 - Abrir o Postman e fazer a chamada para o seguinte endpoint: http://localhost:8081/v1/users
 
+OBS: se o EXTERNAL-IP não estiver com localhost, pare o Docker e inicialize novamente ou
+faça um "reset kubernetes cluster" pela opção setting do Docker
 
 # Cluster IP
 - kubectl apply -f 03-service-cluster-ip.yaml

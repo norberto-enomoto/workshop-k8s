@@ -11,4 +11,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /mysql/data
+    #Padrao Windows
+    path: /run/desktop/mnt/host/c/mysql/data

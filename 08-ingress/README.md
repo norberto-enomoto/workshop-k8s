@@ -3,7 +3,7 @@ https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
 
 # Criar a entrada no arquivo hosts (c:\windows\system32\drivers\etc\hosts ou /etc/hosts):
-127.0.0.1     workshop.springboot
+127.0.0.1     workshop-springboot.com
 
 # Implantação da Aplicação hello-app:1.0
 - kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0
@@ -12,6 +12,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 - kubectl apply -f 01-ingress.yaml
 - kubectl get ingress
 - kubectl describe ingress example-ingress
+- http://workshop-springboot.com
  
 # Abra outro terminal
 - kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
