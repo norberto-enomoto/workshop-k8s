@@ -1,27 +1,26 @@
-kubectl run --rm utils -it --image arunvelsriram/utils bash
+# Load Balancer
+- kubectl apply -f 02-service-load-balancer.yaml
+- kubectl get service
+- kubectl describe service springboot-load-balancer
+- Abrir o Postman e fazer a chamada para o seguinte endpoint: http://localhost:8081/v1/users
 
-nslookup springboot-cluster-ip
-curl http://springboot-cluster-ip.default.svc.cluster.local:8082/v/users
-
-nslookup springboot-node-port
-curl http://springboot-node-port.default.svc.cluster.local:8083/v1/users
 
 # Cluster IP
-- kubectl apply -f 01-service-cluster-ip.yaml
+- kubectl apply -f 03-service-cluster-ip.yaml
 - kubectl get service
 - kubectl describe service nginx-cluster-ip
-- minikube service --url nginx-cluster-ip
-- kubectl delete pod <pod-name>
+- kubectl run temporary --image=radial/busyboxplus:curl -i --tty
+- nslookup springboot-cluster-ip
+- curl http://springboot-cluster-ip.default.svc.cluster.local:8082/v1/users
+
 
 # Node Port
-- kubectl apply -f 02-service-node-port.yaml
+- kubectl apply -f 04-service-node-port.yaml
 - kubectl get service
-- kubectl describe service nginx-node-port
-- minikube service --url nginx-node-port
+- kubectl describe service springboot-node-port
+- kubectl run temporary --image=radial/busyboxplus:curl -i --tty
+- nslookup springboot-node-port
+- curl http://springboot-node-port.default.svc.cluster.local:8083/v1/users
 
-# Load Balancer
-- kubectl apply -f 03-service-load-balancer.yaml
-- kubectl get service
-- kubectl describe service nginx-load-balancer
-- minikube tunnel
-- kubectl get service
+
+
