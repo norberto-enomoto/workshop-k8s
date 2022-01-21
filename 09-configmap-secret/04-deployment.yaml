@@ -48,3 +48,10 @@ spec:
             sources:             
               - secret:
                   name: springboot-secret
+          # resources: # QoS Guaranteed limit e request iguais
+          #   limits:
+          #     cpu: 1000m
+          #     memory: 600Mi 
+          #   requests:
+          #     cpu: 1000m
+          #     memory: 600Mi                  
