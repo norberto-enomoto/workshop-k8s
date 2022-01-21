@@ -7,12 +7,12 @@ https://fission.io/docs/installation/docker-desktop/
 - https://k8s.io/examples/application/php-apache.yaml
 
 # Comandos
-- kubectl apply -f 01-deployment.yaml
-- kubectl apply -f 02-service.yaml 
+- kubectl apply -f 01-metrics-deployment.yaml
+- kubectl apply -f 02-deployment.yaml
+- kubectl apply -f 03-service.yaml 
 - kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 - kubectl get hpa
 - kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
-- 
 
 # Abrir um outro terminal
 - watch kubectl get hpa
@@ -22,3 +22,6 @@ https://fission.io/docs/installation/docker-desktop/
 
 # Abrir um outro terminal
 - watch kubectl get po -o wide
+
+# Abrir um outro terminal
+- watch kubectl top pod

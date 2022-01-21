@@ -12,10 +12,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 - kubectl apply -f 01-ingress.yaml
 - kubectl get ingress
 - kubectl describe ingress example-ingress
-- http://workshop-springboot.com
- 
-# Abra outro terminal
-- kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
+- http://workshop-springboot.com 
 
 # Implantação da Aplicação hello-app:2.0
 - kubectl create deployment web2 --image=gcr.io/google-samples/hello-app:2.0
@@ -24,7 +21,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 - kubectl apply -f 02-ingress.yaml
 - kubectl get ingress
 - kubectl describe ingress example-ingress
-- 
+- http://workshop-springboot.com/v2
+
 # Comandos scale
 - kubectl get po -o wide
 - kubectl scale deployments/web --replicas=2
