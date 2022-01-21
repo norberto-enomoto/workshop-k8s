@@ -13,7 +13,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 - kubectl get ingress
 - kubectl describe ingress example-ingress
  
-- # Abra outro terminal
+# Abra outro terminal
 - kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
 
 # Implantação da Aplicação hello-app:2.0
