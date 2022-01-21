@@ -16,6 +16,8 @@ kubectl patch deployment metrics-server -n kube-system --type 'json' -p '[{"op":
 
 # Run the Kubectl proxy to allow accessing the dashboard
 kubectl proxy
+# Abrir no browser
+ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
 
 
 
