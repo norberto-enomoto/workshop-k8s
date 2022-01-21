@@ -16,8 +16,7 @@ spec:
       containers:
       - image: mysql/mysql-server:latest
         name: mysql
-        env:
-          # Use secret in real usage
+        env:          
         - name: MYSQL_ROOT_PASSWORD
           value: password
         ports:
