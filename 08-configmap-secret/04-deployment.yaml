@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
        - name: springboot-container
-         image: enomoto/spring-boot-ms-m1:2.0
+         image: enomoto/spring-boot-ms:2.0
          imagePullPolicy: Always
          ports:
            - containerPort: 8080

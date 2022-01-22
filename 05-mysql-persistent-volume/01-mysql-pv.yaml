@@ -12,4 +12,6 @@ spec:
     - ReadWriteOnce
   hostPath:
     #Padrao Windows
-    path: /Users/enomoto/mysql/data
+    path: /run/desktop/mnt/host/c/mysql/data
+
+    #path: /Users/enomoto/mysql/data
