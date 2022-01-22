@@ -1,5 +1,8 @@
+https://docs.microsoft.com/pt-br/azure/aks/concepts-clusters-workloads
 https://docs.microsoft.com/pt-br/azure/aks/kubernetes-walkthrough
 https://docs.microsoft.com/en-us/cli/azure/manage-azure-subscriptions-azure-cli
+https://docs.microsoft.com/pt-br/azure/aks/concepts-clusters-workloads
+https://docs.microsoft.com/pt-br/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
 
 # Comandos
 az login
