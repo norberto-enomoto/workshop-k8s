@@ -7,6 +7,6 @@ https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - kubectl get deployment
 - kubectl get deployment nginx-deployment
 - kubectl describe deployment nginx-deployment
-- kubectl port-forward pod <nome-pod> 8080:8080
+- kubectl port-forward <nome-pod> 8080:8080
 - http://localhost:8080/
 
