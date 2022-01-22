@@ -5,8 +5,9 @@ https://kubernetes.io/blog/2021/09/13/read-write-once-pod-access-mode-alpha/
 - kubectl get pods
 - kubectl exec -it <mysql-pod-name> /bin/bash
 - mysql -uroot -p
-- select * from mysql.user;
+- select user, host from mysql.user;
 - UPDATE mysql.user SET host='%' WHERE user='root';
+- select user, host from mysql.user;
 - exit
 - kubectl get pods
 - kubectl delete <mysql-pod-name>
