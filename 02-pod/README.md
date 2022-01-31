@@ -1,6 +1,7 @@
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 
 - kubectl apply -f pod.yaml
+- kubectl get all
 - kubectl get po
 - kubectl get po --show-labels
 - kubectl get po -o wide

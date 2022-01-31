@@ -11,5 +11,6 @@ https://cloud.ibm.com/docs/containers?topic=containers-kube_concepts
 - UPDATE mysql.user SET host='%' WHERE user='root';
 - select user, host from mysql.user;
 - exit
+- exit
 - kubectl get pods
 - kubectl delete <mysql-pod-name>
