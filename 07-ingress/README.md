@@ -10,21 +10,25 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 - kubectl expose deployment web --type=NodePort --port=8080
 - kubectl get service web
 - kubectl describe service web
-- kubectl apply -f 01-ingress.yaml
+- kubectl apply -f 01-ingress-path-01.yaml
 - kubectl get ingress
 - kubectl describe ingress example-ingress
-- http://workshop-springboot.com 
+- http://workshop-springboot.com/v1 
 
 # Implantação da Aplicação hello-app:2.0
 - kubectl create deployment web2 --image=gcr.io/google-samples/hello-app:2.0
 - kubectl expose deployment web2 --port=8080 --type=NodePort
 - kubectl get service web2
 - kubectl describe service web2
-- kubectl apply -f 02-ingress.yaml
+- kubectl apply -f 02-ingress-02.yaml
 - kubectl get ingress
 - kubectl describe ingress example-ingress
 - http://workshop-springboot.com/v2
 
+# Implementação do Ingress baseado no sub domínio
+- kubectl apply -f 03-ingress-subdomain.yaml
+- http://web1.workshop-springboot.com/
+- http://web2.workshop-springboot.com/
 # Comandos scale
 - kubectl get po -o wide
 - kubectl scale deployments/web --replicas=2

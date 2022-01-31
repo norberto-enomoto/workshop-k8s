@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: ingress-path
   annotations:
     nginx.ingress.kubernetes.io/default-backend: ingress-nginx-controller
     kubernetes.io/ingress.class: nginx
@@ -9,21 +9,13 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
-    - host: "workshop-springboot.com"
+    - host: workshop-springboot.com
       http:
         paths:
-          - path: / ## instead of just '/'
+          - path: /v1 ## instead of just '/'
             pathType: Prefix
             backend:
               service:
                 name: web
                 port:
                   number: 8080
-          - path: /v2 ## instead of just '/'
-            pathType: Prefix
-            backend:
-              service:
-                name: web2
-                port:
-                  number: 8080                 
-                  
