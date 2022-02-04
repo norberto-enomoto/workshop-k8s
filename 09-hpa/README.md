@@ -4,7 +4,7 @@ https://blog.codewithdan.com/enabling-metrics-server-for-kubernetes-on-docker-de
 - https://k8s.io/examples/application/php-apache.yaml
 
 # Comandos
-- kubectl apply -f 01-metrics-deployment.yaml
+- kubectl apply -f 01-metrics-server-deployment.yaml
 - kubectl apply -f 02-deployment.yaml
 - kubectl apply -f 03-service.yaml 
 - kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
