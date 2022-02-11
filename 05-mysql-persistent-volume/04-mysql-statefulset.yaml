@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: mysql-deployment
+  name: mysql-statefulset
   labels:
     app: mysql
     tier: database
@@ -10,8 +10,7 @@ spec:
     matchLabels:    
       app: mysql
       tier: database
-  strategy:
-    type: Recreate
+  serviceName: "mysql"      
   template:
     metadata:
       labels:
