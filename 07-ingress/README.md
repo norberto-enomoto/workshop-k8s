@@ -2,6 +2,12 @@
 https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
 
+helm repo add nginx-stable https://helm.nginx.com/stable
+helm install main nginx-stable/nginx-ingress \ 
+--set controller.watchIngressWithoutClass=true \  
+--set controller.service.type=NodePort \ 
+--set controller.service.httpPort.nodePort=30005
+
 # Criar a entrada no arquivo hosts (c:\windows\system32\drivers\etc\hosts ou /etc/hosts):
 127.0.0.1     workshop-springboot.com
 
