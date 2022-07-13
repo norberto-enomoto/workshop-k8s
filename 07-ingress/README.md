@@ -10,6 +10,8 @@ helm install main nginx-stable/nginx-ingress \
 
 # Criar a entrada no arquivo hosts (c:\windows\system32\drivers\etc\hosts ou /etc/hosts):
 127.0.0.1     workshop-springboot.com
+127.0.0.1     web1.workshop-springboot.com
+127.0.0.1     web2.workshop-springboot.com
 
 # Implantação da Aplicação hello-app:1.0
 - kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0
