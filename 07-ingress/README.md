@@ -33,6 +33,8 @@ helm install main nginx-stable/nginx-ingress \
 
 # Implementação do Ingress baseado no sub domínio
 - kubectl apply -f 03-ingress-subdomain.yaml
+- kubectl get ingress
+- kubectl describe ingress ingress-subdomain
 - http://web1.workshop-springboot.com/
 - http://web2.workshop-springboot.com/
 # Comandos scale
