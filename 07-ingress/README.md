@@ -18,7 +18,7 @@ helm install main nginx-stable/nginx-ingress \
 - kubectl describe service web
 - kubectl apply -f 01-ingress-path-01.yaml
 - kubectl get ingress
-- kubectl describe ingress example-ingress
+- kubectl describe ingress ingress-path
 - http://workshop-springboot.com/v1 
 
 # Implantação da Aplicação hello-app:2.0
@@ -28,7 +28,7 @@ helm install main nginx-stable/nginx-ingress \
 - kubectl describe service web2
 - kubectl apply -f 02-ingress-path-02.yaml
 - kubectl get ingress
-- kubectl describe ingress example-ingress
+- kubectl describe ingress ingress-path
 - http://workshop-springboot.com/v2
 
 # Implementação do Ingress baseado no sub domínio
