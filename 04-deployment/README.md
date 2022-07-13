@@ -9,3 +9,5 @@ https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - kubectl describe deployment nginx-deployment
 - kubectl port-forward <nome-pod> 8080:8080
 - http://localhost:8080/
+- kubectl rollout undo deployment/springboot-deployment
+- kubectl rollout status deployment/springboot-deployment
