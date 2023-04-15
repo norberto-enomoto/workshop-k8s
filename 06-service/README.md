@@ -1,3 +1,7 @@
+# Spring Boot -> MySQL
+- kubectl apply -f 01-deployment.yaml
+- kubectl get pods
+
 # Load Balancer
 - kubectl apply -f 02-service-load-balancer.yaml
 - kubectl get service
@@ -12,8 +16,9 @@ faça um "reset kubernetes cluster" pela opção setting do Docker
 - kubectl get service
 - kubectl describe service nginx-cluster-ip
 - kubectl run temporary --image=radial/busyboxplus:curl -i --tty
-- nslookup springboot-cluster-ip
+- nslookup springboot-cluster-ip.default.svc.cluster.local
 - curl http://springboot-cluster-ip.default.svc.cluster.local:8082/v1/users
+- kubectl get service
 
 
 # Node Port
@@ -21,8 +26,10 @@ faça um "reset kubernetes cluster" pela opção setting do Docker
 - kubectl get service
 - kubectl describe service springboot-node-port
 - kubectl run temporary --image=radial/busyboxplus:curl -i --tty
-- nslookup springboot-node-port
+- nslookup springboot-node-port.default.svc.cluster.local
 - curl http://springboot-node-port.default.svc.cluster.local:8083/v1/users
+- kubectl get service
 
-
-
+# Load Balancer - MySQL
+- kubectl apply -f 04-service-node-port.yaml
+- Abrir a extensão do MySQL e conectar no banco de dados
