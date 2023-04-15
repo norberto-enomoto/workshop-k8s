@@ -32,4 +32,4 @@ faça um "reset kubernetes cluster" pela opção setting do Docker
 
 # Load Balancer - MySQL
 - kubectl apply -f 04-service-node-port.yaml
-- Abrir a extensão do MySQL e conectar no banco de dados
+- Abrir a extensão do MySQL e conectar no banco de dados (MySQL management tool - Juan Han)
