@@ -1,12 +1,12 @@
 # Implantação do Nginx Ingress Controller
 https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
 
-helm repo add nginx-stable https://helm.nginx.com/stable
-helm install main nginx-stable/nginx-ingress \ 
---set controller.watchIngressWithoutClass=true \  
---set controller.service.type=NodePort \ 
---set controller.service.httpPort.nodePort=30005
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml
+
+# Instalação via Helm
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
 
 # Criar a entrada no arquivo hosts (c:\windows\system32\drivers\etc\hosts ou /etc/hosts):
 127.0.0.1     workshop-springboot.com
@@ -39,6 +39,7 @@ helm install main nginx-stable/nginx-ingress \
 - kubectl describe ingress ingress-subdomain
 - http://web1.workshop-springboot.com/
 - http://web2.workshop-springboot.com/
+
 # Comandos scale
 - kubectl get po -o wide
 - kubectl scale deployments/web --replicas=2
