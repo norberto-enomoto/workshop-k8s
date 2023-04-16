@@ -1,4 +1,4 @@
-https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
 - kubectl apply -f 01-deployment.yaml
 - kubectl get pod -o wide

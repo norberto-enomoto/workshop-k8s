@@ -1,4 +1,4 @@
-https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+# https://kubernetes.io/pt-br/docs/concepts/workloads/controllers/replicaset/
 
 - kubectl apply -f replicaset.yaml
 - kubectl get pod -o wide

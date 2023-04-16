@@ -1,12 +1,13 @@
-https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+# https://kubernetes.io/pt-br/docs/concepts/overview/working-with-objects/namespaces/
+
 - kubectl api-resources
 - kubectl api-resource | grep pod
 - kubectl apply -f namespace.yaml
 - kubectl get namespaces
-- kubectl get pods -o wide --all-namespaces
-- kubectl get pods -o wide
-- kubectl get pods -o wide -n workshop
-- kubectl get po -o wide -n workshop --show-labels
+- kubectl get pod -o wide --all-namespaces
+- kubectl get pod -o wide
+- kubectl get pod -o wide -n workshop
+- kubectl get pod -o wide -n workshop --show-labels
 - kubectl describe pod nginx -n workshop
 - kubectl logs nginx -n workshop
 - kubectl logs -f nginx -n workshop

@@ -41,7 +41,7 @@ helm upgrade --install ingress-nginx ingress-nginx \
 - http://web2.workshop-springboot.com/
 
 # Comandos scale
-- kubectl get po -o wide
+- kubectl get pod -o wide
 - kubectl scale deployments/web --replicas=2
 - kubectl scale deployments/web2 --replicas=2
-- kubectl get po -o wide
+- kubectl get pod -o wide

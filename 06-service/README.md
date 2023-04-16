@@ -1,6 +1,8 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/ 
+
 # Spring Boot -> MySQL
 - kubectl apply -f 01-deployment.yaml
-- kubectl get pods
+- kubectl get pod
 
 # Load Balancer
 - kubectl apply -f 02-service-load-balancer.yaml

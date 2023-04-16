@@ -10,8 +10,10 @@ https://medium.com/stakater/k8s-deployments-vs-statefulsets-vs-daemonsets-60582f
 https://www.kubermatic.com/blog/keeping-the-state-of-apps-5/
 https://www.baeldung.com/ops/kubernetes-deployment-vs-statefulsets
 
+# https://kubernetes.io/pt-br/docs/concepts/storage/persistent-volumes/
+
 - kubectl apply -f .
-- kubectl get pods
+- kubectl get pod
 
 # Executar os comando abaixo para que o MySQL tenha acesso a outros hosts, além do localhost
 
@@ -23,5 +25,5 @@ https://www.baeldung.com/ops/kubernetes-deployment-vs-statefulsets
 - exit
 - exit
 
-- kubectl get pods
+- kubectl get pod
 - kubectl delete <mysql-pod-name>

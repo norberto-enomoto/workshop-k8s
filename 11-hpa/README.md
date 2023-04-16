@@ -16,7 +16,7 @@ https://blog.codewithdan.com/enabling-metrics-server-for-kubernetes-on-docker-de
 - watch kubectl get deployment php-apache
 
 # Abrir um outro terminal
-- watch kubectl get po
+- watch kubectl get pod
 
 # Abrir um outro terminal
 - watch kubectl top pod
