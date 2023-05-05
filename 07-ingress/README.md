@@ -28,6 +28,7 @@ helm upgrade --install ingress-nginx ingress-nginx \
 - kubectl expose deployment web2 --port=8080 --type=NodePort
 - kubectl get service web2
 - kubectl describe service web2
+- 
 - kubectl apply -f 02-ingress-path-02.yaml
 - kubectl get ingress
 - kubectl describe ingress ingress-path

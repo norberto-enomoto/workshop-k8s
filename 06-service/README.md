@@ -22,12 +22,10 @@ faça um "reset kubernetes cluster" pela opção setting do Docker
 # Cluster IP
 - kubectl apply -f 04-service-cluster-ip.yaml
 - kubectl get service
-- kubectl describe service nginx-cluster-ip
+- kubectl describe service springboot-cluster-ip
 - kubectl exec -it dnsutils -- nslookup springboot-cluster-ip
 - kubectl run curlpod --image=curlimages/curl -i --tty -- sh
 - curl http://springboot-cluster-ip.default.svc.cluster.local:8082/v1/users
-- kubectl get service
-
 
 # Node Port
 - kubectl apply -f 05-service-node-port.yaml
@@ -36,7 +34,6 @@ faça um "reset kubernetes cluster" pela opção setting do Docker
 - kubectl exec -it dnsutils -- nslookup springboot-node-port
 - kubectl exec -it curlpod -- sh
 - curl http://springboot-node-port.default.svc.cluster.local:8083/v1/users
-- kubectl get service
 
 # Load Balancer - MySQL
 - kubectl apply -f 06-mysql-load-balancer.yaml
