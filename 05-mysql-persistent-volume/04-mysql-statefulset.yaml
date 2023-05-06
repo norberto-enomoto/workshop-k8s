@@ -18,8 +18,8 @@ spec:
         tier: database
     spec:
       containers:
-      # - image: mysql/mysql-server:latest
-      - image: arm64v8/mysql:latest     
+      - image: mysql/mysql-server:latest
+      # - image: arm64v8/mysql:latest     
         name: mysql                        
         env:          
         - name: MYSQL_ROOT_PASSWORD
