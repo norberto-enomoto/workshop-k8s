@@ -1,7 +1,7 @@
 # https://kubernetes.io/pt-br/docs/concepts/overview/working-with-objects/namespaces/
 
 - kubectl api-resources
-- kubectl api-resource | grep pod
+- kubectl api-resources | grep pod
 - kubectl apply -f namespace.yaml
 - kubectl get namespaces
 - kubectl get pod -o wide --all-namespaces

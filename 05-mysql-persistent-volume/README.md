@@ -17,7 +17,7 @@ https://www.baeldung.com/ops/kubernetes-deployment-vs-statefulsets
 
 # Executar os comando abaixo para que o MySQL tenha acesso a outros hosts, além do localhost
 
-- kubectl exec -it <mysql-pod-name> /bin/bash
+- kubectl exec -it mysql-statefulset-0 /bin/bash
 - mysql -uroot -p
 - select user, host from mysql.user;
 - UPDATE mysql.user SET host='%' WHERE user='root';
@@ -25,5 +25,5 @@ https://www.baeldung.com/ops/kubernetes-deployment-vs-statefulsets
 - exit
 - exit
 
+- kubectl delete pod mysql-statefulset-0
 - kubectl get pod
-- kubectl delete <mysql-pod-name>
