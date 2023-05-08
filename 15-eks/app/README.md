@@ -28,8 +28,8 @@ https://repost.aws/knowledge-center/eks-persistent-storage
     - exit
     - exit
 
-- kubectl get pod
-- kubectl mysql-statefulset-0 /bin/bash
+ # verificar em qual node que foi criado. Entar no node e verificar o path /run/desktop/mnt/host/c/mysql/data  
+ - kubectl get pod -o wide 
 
 - kubectl apply -f 05-deployment.yaml
 - kubectl get pod
