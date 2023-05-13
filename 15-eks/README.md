@@ -2,7 +2,13 @@
 
 # https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
 - aws configure
-- aws ec2 create-key-pair --key-name eks-key --key-type rsa --key-format pem --output text > eks-key.pem
+- 
+# Windows PowerShell
+- aws ec2 create-key-pair --key-name eks-key --output text | out-file -encoding ascii -filepath eks-key.pem
+
+# Mac ou Linux
+- aws ec2 create-key-pair --key-name eks-key --output text > eks-key.pem
+
 - eksctl create cluster -f 01-eks-cluster.yaml
 
 - mostrar na console o CloudFormation
