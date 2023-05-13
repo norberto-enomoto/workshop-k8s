@@ -9,13 +9,15 @@
 - kubectl apply -f 02-secret.yaml
 - kubectl get secret 
 - kubectl describe secret springboot-secret
-
+ 
+- kubectl apply -f 03-deployment
 # Verificar váriável de ambiente do ConfigMap e Secret
 - kubectl get pod
 - kubectl exec -it <pod-name> /bin/bash
 - echo $DB_HOST
 - echo $DB_PORT
 
+- kubectl apply -f 04-deployment
 # Verificar o volume -> ConfigMap e Secret
 - kubectl get pods
 - kubectl exec -it <pod-name> /bin/bash
