@@ -1,3 +1,9 @@
+# https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root
+
+- MFA conta root
+- User -> operation-1 -> adicionar Permission: AdministratorAccess (somente para o workshop)
+- User -> operation-1 -> MFA e Access Keys
+ 
 # https://docs.aws.amazon.com/pt_br/eks/latest/userguide/what-is-eks.html
 
 # https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
