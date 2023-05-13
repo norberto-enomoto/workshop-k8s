@@ -20,5 +20,5 @@ managedNodeGroups:
         cloudWatch: true
         albIngress: true
     ssh: # use existing EC2 key
-      publicKeyName: frida-2023
+      publicKeyName: eks-key
       

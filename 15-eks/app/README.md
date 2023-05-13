@@ -9,6 +9,7 @@ https://repost.aws/knowledge-center/eks-persistent-storage
 
 - kubectl get storageclass
   
+- 
 - kubectl apply -f 01-mysql-pv.yaml
 - kubectl get pv
 
@@ -27,15 +28,22 @@ https://repost.aws/knowledge-center/eks-persistent-storage
     - select user, host from mysql.user;
     - exit
     - exit
-
+    - 
+- kubectl delete pods mysql-statefulset-0
  # verificar em qual node que foi criado. Entar no node e verificar o path /run/desktop/mnt/host/c/mysql/data  
- - kubectl get pod -o wide 
+ - kubectl get pods -o wide 
 
 - kubectl apply -f 05-deployment.yaml
-- kubectl get pod
+- kubectl get pods
+- kubectl logs <pod-name>
 
 - kubectl apply -f 06-service-load-balancer.yaml
 - kubectl get services
+# verificar os Endpoints
+- kubectl describe svc springboot-load-balancer
+
+# verificar os IP
+- kubectl get pods -o wide
 
 - Utilizar Postman ou Insommia para realizar a chamada da API Restful
 - http://<EXTERNAL-IP>:8081/v1/users
@@ -46,5 +54,10 @@ Post
 	"email":"hello@k8s.com"
 }
 
-- kubectl delete pod mysql-statefulset-0
-- kubectl get pod
+- logar na instância com o session manager na instância onde esta sendo executado o pod mysql-statefulset-0
+- cd /run/desktop/mnt/host/c/mysql/data 
+
+- mostrar a console do EKS 
+
+
+
