@@ -13,7 +13,7 @@
 
 - mostrar na console o CloudFormation
  
-- 
+
 - eksctl utils update-cluster-logging --enable-types audit --approve --cluster eksctl-cluster
 - eksctl utils update-cluster-logging --disable-types audit --approve --cluster eksctl-cluster
 - eksctl delete cluster -f 01-eks-cluster.yaml
