@@ -14,5 +14,11 @@
 # Instalação do K8S Lens
 https://k8slens.dev/desktop.html
 
+# Kubeview
+https://github.com/benc-uk/kubeview
+- git clone https://github.com/benc-uk/kubeview
+- cd kubeview/charts/
+- helm install kubeview kubeview
+
 # Instalação Extensão VS Code
 - Kubernetes: Microsoft
