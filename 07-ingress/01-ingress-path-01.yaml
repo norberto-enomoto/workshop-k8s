@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
-    - host: workshop-springboot.com
+    - host: workshop-springboot.com      
       http:
         paths:
           - path: /v1 ## instead of just '/'
