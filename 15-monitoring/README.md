@@ -18,8 +18,8 @@ https://k8slens.dev/desktop.html
 https://github.com/benc-uk/kubeview
 - git clone https://github.com/benc-uk/kubeview
 - cd kubeview/charts/
-- alterar o arquivo service.yaml -> port: 8181
-- helm install kubeview kubeview
+- helm install kubeview ./kubeview -f ./kubeview/values.yaml
+- http://localhost
 
 # Instalação Extensão VS Code
 - Kubernetes: Microsoft
