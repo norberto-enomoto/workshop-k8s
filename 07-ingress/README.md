@@ -1,7 +1,7 @@
 # Implantação do Nginx Ingress Controller
 https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml
+exit
 
 # Instalação via Helm
 helm upgrade --install ingress-nginx ingress-nginx \
